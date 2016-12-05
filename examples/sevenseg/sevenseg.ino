@@ -78,4 +78,10 @@ void loop() {
     matrix.writeDisplay();
     delay(10);
   }
+  delay(500);
+  
+  // Write a string 
+  matrix.writeString("TEST");
+  matrix.writeDisplay();
+  delay(500);
 }
