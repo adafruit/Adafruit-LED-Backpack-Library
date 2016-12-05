@@ -57,6 +57,7 @@ class Adafruit_LEDBackpack {
  public:
   Adafruit_LEDBackpack(void);
   void begin(uint8_t _addr);
+  void setAddr(uint8_t _addr);
   void setBrightness(uint8_t b);
   void blinkRate(uint8_t b);
   void writeDisplay(void);
@@ -75,6 +76,7 @@ class Adafruit_AlphaNum4 : public Adafruit_LEDBackpack {
 
   void writeDigitRaw(uint8_t n, uint16_t bitmask);
   void writeDigitAscii(uint8_t n, uint8_t ascii, boolean dot = false);
+  uint16_t asciiToRaw(uint8_t ascii, boolean dot = false);
 
  private:
 
